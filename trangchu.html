@@ -1,0 +1,24 @@
+<div class="container" >
+    <div class="row">
+        <div class="col-md-3">
+            <p>
+                <b>Sắp xếp theo:</b>
+                <button type="button" class="btn btn-warning text-light fw-semibold" ng-click="tang()">Giá tăng dần</button>
+                <button type="button" class="btn btn-warning text-light fw-semibold" ng-click="giam()">Giá giảm dần</button>
+            </p>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-4" ng-repeat="p in products | orderBy: sort">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>{{p.name}}</p>
+                            <p class="card-text">{{p.price}} VNĐ</p>
+                            <img src="{{p.image}}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

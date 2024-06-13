@@ -1,0 +1,62 @@
+{
+    "products":
+    [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "price": 100000,
+            "image": "https://nemvanthanh.vn/wp-content/uploads/2022/04/nem-tien-ich-8-300x300.png",
+            "category": "miền Nam"
+        },
+        {
+            "id": 2,
+            "name": "Product 2",
+            "price": 200,
+            "image": "2.jpeg",
+            "category": "miền Nam"
+        },
+        {
+            "id": 3,
+            "name": "Product 3",
+            "price": 300,
+            "image": "3.jpeg",
+            "category": "miền Nam"
+        },
+        {
+            "id": 4,
+            "name": "Product 4",
+            "price": 400,
+            "image": "4.jpeg",
+            "category": "miền Nam"
+        },
+        {
+            "id": 5,
+            "name": "Product 5",
+            "price": 500,
+            "image": "5.jpeg",
+            "category": "miền Bắc"
+        },
+        {
+            "id": 6,
+            "name": "Product 6",
+            "price": 600,
+            "image": "6.jpeg",
+            "category": "miền Bắc"
+        },
+        {
+            "id": 7,
+            "name": "Product 7",
+            "price": 700,
+            "image": "7.jpeg",
+            "category": "miền Bắc"
+        },
+        {
+            "id": 8,
+            "name": "Product 8",
+            "price": 800,
+            "image": "8.jpeg",
+            "category": "miền Bắc"
+        } 
+    ]
+}
+    
