@@ -14,11 +14,12 @@ app.controller("myCtrl",function ($scope, $rootScope, $routeParams, $http, $wind
         console.log($scope.products);
         $scope.detailPro=$scope.products.find(item=>item.id==$routeParams.id);
     });
-    $scope.sort='price';
+    $scope.sort='price_after';
     $scope.tang=function(){
-        $scope.sort='price';
+        $scope.sort='price_after';
     }
     $scope.giam=function(){
-        $scope.sort='-price';
+        $scope.sort='-price_after';
     }
+    $scope.category='';
 });  

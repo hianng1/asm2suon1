@@ -1,24 +1,73 @@
 <div class="container" >
     <div class="row">
         <div class="col-md-3">
-            <p>
-                <b>Sắp xếp theo:</b>
-                <button type="button" class="btn btn-warning text-light fw-semibold" ng-click="tang()">Giá tăng dần</button>
-                <button type="button" class="btn btn-warning text-light fw-semibold" ng-click="giam()">Giá giảm dần</button>
-            </p>
-            <input type="text" ng-model="search" placeholder="Tìm kiếm theo tên">
+            <hr>
+            <p class="fw-semibold">THƯƠNG HIỆU</p>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="No Brand">
+                <label class="form-check-label" for="exampleCheck1">No Brand</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Cardina">
+                <label class="form-check-label" for="exampleCheck1">Cardina</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Laroma">
+                <label class="form-check-label" for="exampleCheck1">Laroma</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Hưng Việt">
+                <label class="form-check-label" for="exampleCheck1">Hưng Việt</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="PMax">
+                <label class="form-check-label" for="exampleCheck1">PMax</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Sunfly">
+                <label class="form-check-label" for="exampleCheck1">Sunfly</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Uniqlo">
+                <label class="form-check-label" for="exampleCheck1">Uniqlo</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="CT GROUP">
+                <label class="form-check-label" for="exampleCheck1">CT GROUP</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Hương Giang">
+                <label class="form-check-label" for="exampleCheck1">Hương Giang</label>
+              </div>
         </div>
         <div class="col-md-9">
             <div class="row">
-                <!-- <div class="col-sm-4" ng-repeat="p in products| filter: {'category' : 'miền Nam'}| orderBy: sort| filter: search"> -->
-                    <div class="col-sm-4" ng-repeat="p in products| orderBy: sort| filter: search">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>{{p.name}}</p>
-                            <p class="card-text">{{p.price}} VNĐ</p>
-                            <img src="{{p.image}}" class="img-fluid" alt="">
+                <div class="d-flex justify-content-between">
+                    <p><b>Áo chống nắng</b> (51 sản phẩm)</p>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Sắp xếp theo
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><button type="button" class="btn btn-primary text-light fw-semibold" ng-click="tang()">Giá tăng dần</button></li>
+                          <li><button type="button" class="btn btn-primary text-light fw-semibold" ng-click="giam()">Giá giảm dần</button></li>
+                        </ul>
+                      </div>
+                </div>
+                    <div class="col-sm-3 p-2" ng-repeat="p in products| orderBy: sort">
+                        <div class="card">
+                            <div class="position-relative">
+                                <a href="#!detail/{{p.id}}"><img src="{{p.image}}" class="card-img-top img-fluid" 
+                                        alt="{{p.name}}" style="height: 270px; width: 100%; object-fit: cover;"></a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{p.name}}</h5>
+                                <p class="card-text"><small class="text-muted">{{p.time}}</small></p>
+                                <p class="card-text text-muted"><strong class="text-danger">{{p.price_before| number:0}}đ</strong> <del>{{p.price_after| number:0}}đ</del>
+                                </p>
+                                <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
