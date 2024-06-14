@@ -6,10 +6,12 @@
                 <button type="button" class="btn btn-warning text-light fw-semibold" ng-click="tang()">Giá tăng dần</button>
                 <button type="button" class="btn btn-warning text-light fw-semibold" ng-click="giam()">Giá giảm dần</button>
             </p>
+            <input type="text" ng-model="search" placeholder="Tìm kiếm theo tên">
         </div>
         <div class="col-md-9">
             <div class="row">
-                <div class="col-sm-4" ng-repeat="p in products | orderBy: sort">
+                <!-- <div class="col-sm-4" ng-repeat="p in products| filter: {'category' : 'miền Nam'}| orderBy: sort| filter: search"> -->
+                    <div class="col-sm-4" ng-repeat="p in products| orderBy: sort| filter: search">
                     <div class="card">
                         <div class="card-body">
                             <p>{{p.name}}</p>
